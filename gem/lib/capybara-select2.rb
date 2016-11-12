@@ -14,7 +14,7 @@ module Capybara
       elsif options.has_key? :css
         select2_container = find(:css, options[:css], match: :first)
       elsif options.has_key? :id
-        select2_container = find_by_id(options[:id]
+        select2_container = find_by_id(options[:id])
       else
         select_name = options[:from]
         select2_container = find("label", text: select_name, match: :first).find(:xpath, '..').find(".select2-container")
