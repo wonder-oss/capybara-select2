@@ -68,7 +68,7 @@ module Capybara
       clicked = false
 
       begin
-        Timeout.timeout(2) do
+        Timeout.timeout(5) do
           if page.has_selector?(select2_option_selector, text: value)
             click_on_option(value)
             clicked = true
